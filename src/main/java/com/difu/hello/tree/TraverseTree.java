@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * 树的遍历
+ */
 public class TraverseTree {
-    static List<Integer> res = new ArrayList<>();
 
     /***
      *         1
@@ -20,6 +22,10 @@ public class TraverseTree {
         // 前序遍历
         List<Integer> res = preOrderTraverse(treeNode);
         System.out.println(res);
+
+        // 借助外部变量的前序遍历
+        traverse(treeNode);
+        System.out.println(result);
 
         // 看节点在第几层
         traverse(treeNode, 1);
@@ -48,11 +54,15 @@ public class TraverseTree {
         return res;
     }
 
+    /**
+     * 借助外部变量的前序遍历
+     */
+    static List<Integer> result = new ArrayList<>();
     static void traverse(TreeNode root){
         if (root == null) {
             return;
         }
-        res.add(root.value);
+        result.add(root.value);
 
         traverse(root.left);
 
