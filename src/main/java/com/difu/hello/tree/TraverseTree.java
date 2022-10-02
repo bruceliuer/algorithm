@@ -18,6 +18,7 @@ public class TraverseTree {
      */
     public static void main(String[] args) {
         TreeNode treeNode = TreeNode.build("1,2,3,4,5,6,7,8");
+        // 3,9,20,null,null,15,7
         System.out.println(treeNode);
         // 前序遍历
         List<Integer> res = preOrderTraverse(treeNode);

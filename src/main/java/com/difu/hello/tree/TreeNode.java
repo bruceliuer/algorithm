@@ -19,11 +19,11 @@ public class TreeNode {
         String[] arr = str.split(",");
         TreeNode[] nodes = new TreeNode[arr.length + 1];
         for (int i = 1; i < nodes.length; i++) {
-            int val = Integer.valueOf(arr[i - 1]);
-            if (val != Integer.MAX_VALUE) {
-                nodes[i] = new TreeNode(val);
-            }else {
+            String val = arr[i - 1];
+            if ("null".equals(val) || val == null) {
                 nodes[i] = null;
+            } else {
+                nodes[i] = new TreeNode(Integer.valueOf(val));
             }
         }
         TreeNode node = null;
@@ -48,6 +48,10 @@ public class TreeNode {
 
     @Override
     public String toString() {
-        return String.valueOf(value);
+        if (value != null) {
+            return String.valueOf(value);
+        } else {
+            return "null";
+        }
     }
 }
