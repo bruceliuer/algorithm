@@ -13,8 +13,8 @@ public class ListNode {
     public static ListNode buildNode(Integer[] array) {
         ListNode list = new ListNode(array[0]);
         ListNode p = list;
-        for (Integer i1 = 1; i1 < array.length; i1 ++) {
-            p.next = new ListNode(array[i1]);
+        for (Integer i = 1; i < array.length; i ++) {
+            p.next = new ListNode(array[i]);
             p = p.next;
         }
         return list;
