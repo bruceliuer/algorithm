@@ -1,4 +1,4 @@
-package com.difu.hello.binarysearch;
+package com.difu.hello.twopoint.binarysearch;
 
 public class BinarySearch {
 

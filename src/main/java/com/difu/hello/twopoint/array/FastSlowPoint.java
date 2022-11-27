@@ -1,4 +1,4 @@
-package com.difu.hello.array;
+package com.difu.hello.twopoint.array;
 
 import java.util.Arrays;
 
